@@ -5,5 +5,5 @@ This is my first attempt at learning Unity3D.<br/>
 
 <ol>
 	<li><b>Roll A Ball</b> This game allows the user to roll a ball and collect 12 game pieces to receive a "You Win!" message.</li>
-	<li><b>Space Shooter... IN PROGRESS</b> This game allows the user pilot a ship and shoot asteroids in space</li>
+	<li><b>Space Shooter... IN PROGRESS</b> This game allows the user pilot a ship and shoot objects in space</li>
 </ol>

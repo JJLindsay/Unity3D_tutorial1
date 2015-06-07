@@ -3,9 +3,25 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour 
 {
+	//these are accessible/changeable outside of this class
 	public float speed;
 	public Boundary boundary; //references created class
 	public float tilt;  //tilt the ship on turn
+	public GameObject shot;
+	public Transform shotSpawn;
+	public float fireRate;
+
+	private float nextFire;
+
+	void Update()
+	{
+		if (Input.GetButton("Fire1") && Time.time > nextFire) 
+		{
+			nextFire = Time.time + fireRate;
+			//GameObject clone = 
+				Instantiate(shot, shotSpawn.position, shotSpawn.rotation); //as GameObject
+		}
+	}
 
 	//called auto by unity before each Fixed Physics Step
 	void FixedUpdate()
