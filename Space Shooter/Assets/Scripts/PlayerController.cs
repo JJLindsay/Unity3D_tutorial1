@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 
 	private float nextFire;
 
+	//this is talking about what to update per frame.
 	void Update()
 	{
 		if (Input.GetButton("Fire1") && Time.time > nextFire) 
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
 			nextFire = Time.time + fireRate;
 			//GameObject clone = 
 				Instantiate(shot, shotSpawn.position, shotSpawn.rotation); //as GameObject
+			GetComponent<AudioSource>().Play();
 		}
 	}
 
